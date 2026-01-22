@@ -1,0 +1,5 @@
+{
+  "name": "Global Market Sentinel",
+  "description": "Real-time AI monitoring of international events affecting US stock markets, with impact analysis and simulated email alerts.",
+  "requestFramePermissions": []
+}

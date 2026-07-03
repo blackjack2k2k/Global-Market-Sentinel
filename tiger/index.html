@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tiger Brokers 持仓风险仪表盘 - 2026-07-01</title>
+  <style>
+    :root{--bg:#f7f8f4;--ink:#17211c;--muted:#64736b;--line:#dce2da;--panel:#fff;--soft:#eef4f0;--green:#12715b;--amber:#b76b17;--red:#b33a3a;--blue:#305f8d;--shadow:0 18px 45px rgba(24,36,30,.08)}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,"Segoe UI",Arial,"Microsoft YaHei",sans-serif;letter-spacing:0}.shell{max-width:1240px;margin:0 auto;padding:28px 24px 42px}header{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;padding-bottom:22px;border-bottom:1px solid var(--line)}h1{margin:0;font-size:30px;line-height:1.18;font-weight:750}.sub{margin-top:8px;color:var(--muted);font-size:14px}.rating{min-width:210px;padding:14px 16px;border:1px solid #e3c48f;background:#fff7e8;border-radius:8px;text-align:right}.rating strong{display:block;color:var(--amber);font-size:22px}.grid{display:grid;gap:16px}.kpis{grid-template-columns:repeat(5,minmax(0,1fr));margin:22px 0}.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow)}.kpi{padding:16px;min-height:104px}.kpi span{display:block;color:var(--muted);font-size:12px;margin-bottom:10px}.kpi strong{font-size:22px;line-height:1.1}.kpi small{display:block;margin-top:8px;color:var(--muted)}.main{grid-template-columns:1.4fr .9fr;align-items:start}section{padding:18px}h2{margin:0 0 14px;font-size:18px}h3{margin:18px 0 10px;font-size:14px;color:var(--muted);font-weight:650}table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:10px 8px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}th:first-child,td:first-child{text-align:left}th{color:var(--muted);font-size:12px;font-weight:650;background:#fafbf8}tr:last-child td{border-bottom:0}.positive{color:var(--green)}.negative{color:var(--red)}.muted{color:var(--muted)}.bars{display:grid;gap:10px}.bar-row{display:grid;grid-template-columns:92px 1fr 92px;gap:10px;align-items:center;font-size:13px}.track{height:10px;background:var(--soft);border-radius:999px;overflow:hidden}.fill{height:100%;background:var(--green);border-radius:999px}.fill.blue{background:var(--blue)}.fill.amber{background:var(--amber)}.alerts{display:grid;gap:10px}.alert{padding:12px;border:1px solid var(--line);border-radius:8px;background:#fbfcfa;font-size:13px;line-height:1.5}.alert strong{display:block;margin-bottom:4px}.split{grid-template-columns:1fr 1fr;margin-top:16px}.note{margin-top:16px;padding:14px 16px;border:1px dashed #c6d0c8;border-radius:8px;color:var(--muted);font-size:13px;line-height:1.6}.stamp{display:inline-flex;gap:8px;align-items:center;margin-top:10px;padding:6px 9px;border:1px solid var(--line);border-radius:8px;background:#fbfcfa;color:var(--muted);font-size:12px}@media(max-width:980px){.kpis,.main,.split{grid-template-columns:1fr}header{display:block}.rating{margin-top:14px;text-align:left}.table-wrap{overflow-x:auto}}
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div>
+        <h1>Tiger Brokers 持仓风险仪表盘</h1>
+        <div class="sub">报告日 2026-07-01 · 基础货币 USD · 数据源 Daily_Portfolio_Snapshot XML / Google Drive 归档副本</div>
+        <div class="stamp">公开镜像 · 固定路径 /tiger/</div>
+      </div>
+      <div class="rating"><span class="muted">风险评级</span><strong>中等</strong><span class="muted">短债为主体，科技与期权集中度需要跟踪</span></div>
+    </header>
+
+    <div class="grid kpis">
+      <div class="card kpi"><span>NAV</span><strong>$2,961,858.72</strong><small>当日 +$15,565.41</small></div>
+      <div class="card kpi"><span>T-bill / Bonds</span><strong>$2,976,190.05</strong><small>约 100.5% NAV</small></div>
+      <div class="card kpi"><span>Stocks / ETFs</span><strong>$515,504.45</strong><small>科技成长占主要风险</small></div>
+      <div class="card kpi"><span>Options</span><strong class="negative">-$20,673.54</strong><small>净空权利金</small></div>
+      <div class="card kpi"><span>Cash</span><strong class="negative">-$508,672.50</strong><small>JPY 房产融资背景单列</small></div>
+    </div>
+
+    <div class="grid main">
+      <section class="card">
+        <h2>前八大持仓</h2>
+        <div class="table-wrap"><table><thead><tr><th>标的</th><th>类别</th><th>币种</th><th>数量</th><th>价格</th><th>USD 市值</th><th>未实现 P/L</th></tr></thead><tbody>
+          <tr><td>912797TQ0</td><td>BILL</td><td>USD</td><td>1,000,000</td><td>99.7246</td><td>$997,245.73</td><td class="positive">+$5,789.90</td></tr>
+          <tr><td>912797TY3</td><td>BILL</td><td>USD</td><td>1,000,000</td><td>99.4376</td><td>$994,376.20</td><td class="positive">+$3,516.59</td></tr>
+          <tr><td>912797SU2</td><td>BILL</td><td>USD</td><td>1,000,000</td><td>98.4568</td><td>$984,568.12</td><td class="positive">+$589.79</td></tr>
+          <tr><td>MSFT</td><td>Stock</td><td>USD</td><td>400</td><td>384.28</td><td>$153,712.00</td><td class="negative">-$3,888.00</td></tr>
+          <tr><td>CBIL</td><td>ETF</td><td>CAD</td><td>4,200</td><td>50.03</td><td>$147,806.83</td><td class="negative">-$177.13</td></tr>
+          <tr><td>NVDA</td><td>Stock</td><td>USD</td><td>400</td><td>197.58</td><td>$79,032.00</td><td class="positive">+$33,269.36</td></tr>
+          <tr><td>META</td><td>Stock</td><td>USD</td><td>100</td><td>612.91</td><td>$61,291.00</td><td class="negative">-$2,055.00</td></tr>
+          <tr><td>COIN</td><td>Stock</td><td>USD</td><td>200</td><td>159.24</td><td>$31,848.00</td><td class="negative">-$37,273.00</td></tr>
+        </tbody></table></div>
+      </section>
+
+      <section class="card">
+        <h2>最需要关注</h2>
+        <div class="alerts">
+          <div class="alert"><strong>MSFT 期权集中</strong>净期权市值约 -$16,437.77，7 月到期合约要看指派、展期和回补成本。</div>
+          <div class="alert"><strong>科技成长相关性</strong>MSFT、NVDA、META、COIN、ARKK、ARKG 与相关期权在 Nasdaq 回撤中可能同向放大。</div>
+          <div class="alert"><strong>QQQ 是 put spread</strong>当前为 3 张 570/530 put spread；附件未显示 QQQ short call，不按备兑 call 写风险。</div>
+          <div class="alert"><strong>JPY 负现金单列</strong>-115,559,069 JPY 为用户说明的房产融资背景，未纳入证券组合风险评分扣分。</div>
+        </div>
+      </section>
+    </div>
+
+    <div class="grid split">
+      <section class="card">
+        <h2>资产类别与币种</h2>
+        <div class="bars">
+          <div class="bar-row"><span>T-bill/Bonds</span><div class="track"><div class="fill" style="width:100%"></div></div><span>$2.98M</span></div>
+          <div class="bar-row"><span>Stocks/ETFs</span><div class="track"><div class="fill blue" style="width:17.3%"></div></div><span>$515.5K</span></div>
+          <div class="bar-row"><span>Options abs</span><div class="track"><div class="fill amber" style="width:1%"></div></div><span>$29.9K</span></div>
+        </div>
+        <h3>币种敞口，证券持仓，不含现金</h3>
+        <div class="table-wrap"><table><thead><tr><th>币种</th><th>净 USD 市值</th><th>绝对 USD 敞口</th></tr></thead><tbody>
+          <tr><td>USD</td><td>$3,311,824.51</td><td>$3,362,391.33</td></tr>
+          <tr><td>CAD</td><td>$147,806.83</td><td>$147,806.83</td></tr>
+          <tr><td>JPY</td><td>$11,389.61</td><td>$11,389.61</td></tr>
+        </tbody></table></div>
+      </section>
+
+      <section class="card">
+        <h2>期权 Underlying</h2>
+        <div class="table-wrap"><table><thead><tr><th>Underlying</th><th>净市值</th><th>绝对市值</th><th>结构</th></tr></thead><tbody>
+          <tr><td>MSFT</td><td class="negative">-$16,437.77</td><td>$21,462.39</td><td>短 put / 价差 / covered call</td></tr>
+          <tr><td>QQQ</td><td class="positive">+$604.89</td><td>$2,674.23</td><td>570/530 put spread</td></tr>
+          <tr><td>MU</td><td class="negative">-$1,702.32</td><td>$1,702.32</td><td>短 put</td></tr>
+          <tr><td>META</td><td class="negative">-$1,341.78</td><td>$1,341.78</td><td>短 put</td></tr>
+          <tr><td>GOOG</td><td class="negative">-$1,083.56</td><td>$1,083.56</td><td>短 put</td></tr>
+          <tr><td>NVDA</td><td class="negative">-$143.00</td><td>$1,059.00</td><td>put spread</td></tr>
+        </tbody></table></div>
+      </section>
+    </div>
+
+    <section class="card" style="margin-top:16px">
+      <h2>情景压力测试</h2>
+      <div class="table-wrap"><table><thead><tr><th>情景</th><th>静态影响估算</th><th>说明</th></tr></thead><tbody>
+        <tr><td>美股/科技股整体下跌 10%</td><td class="negative">约 -$40K 至 -$55K，期权可能进一步亏损</td><td>未含精确 Greeks，短 put 与价差对跌幅敏感</td></tr>
+        <tr><td>COIN 下跌 25%</td><td class="negative">约 -$8.0K</td><td>单股波动较高，当前未实现亏损较大</td></tr>
+        <tr><td>MSFT 下跌 10%</td><td class="negative">正股约 -$15.4K，期权另计</td><td>MSFT 是最大股票与最大期权 underlying</td></tr>
+        <tr><td>CAD 贬值 5%</td><td class="negative">约 -$7.4K</td><td>主要来自 CBIL CAD 敞口</td></tr>
+        <tr><td>JPY 对 USD 升值 5%</td><td class="negative">账户折算压力约 -$35.5K</td><td>按房产融资背景单列，不纳入证券组合评分</td></tr>
+      </tbody></table></div>
+      <div class="note">数据质量：Gmail 原附件为 application/octet-stream 且连接器不支持读取；本仪表盘使用 Google Drive 归档副本，文件大小 117,025 字节，根节点为 FlexQueryResponse。非美元仓位按附件 fxRateToBase 换算为 USD。仅供风险监控与信息整理，不构成投资建议。</div>
+    </section>
+  </div>
+</body>
+</html>
